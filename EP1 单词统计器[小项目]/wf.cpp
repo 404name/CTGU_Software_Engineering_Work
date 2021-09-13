@@ -35,7 +35,7 @@ class FileUtil{
 		{
 		    ifstream fin(file_path); 
 		    string strWord("");
-		    string str;
+		    string str = "";
 		    char c;
 		    while(fin.get(c))
 		    {
@@ -43,6 +43,25 @@ class FileUtil{
 		        	str += c;
 				}else if(c >= 'A' && c <= 'Z'){
 					str += c + ('a' - 'A');
+				}else if(c == '\''){
+					fin.get(c);
+					if(((c >= 'a' && c <= 'z')|| (c >= 'A' && c <= 'Z'))){
+						
+						if(c >= 'A' && c <= 'Z'){
+							 c += ('a' - 'A');
+						}
+						if(str.size() == 0){
+							str += c;
+						}else{
+							str += '\'';
+							str += c; 
+						}
+					}else{
+						if(str != ""){
+			                vec.push_back(str); 
+						}
+			            str = "";
+					}
 				}
 		        else
 		        {
@@ -50,7 +69,7 @@ class FileUtil{
 		                vec.push_back(str); 
 					}
 		            str = "";
-		        }   
+		        } 
 		    }
 		    if(str != ""){
 		        vec.push_back(str); 
@@ -97,22 +116,22 @@ class FileUtil{
 
 };
 
-
-
-
 /**
 * @全局工具类 
-* -stop表 hashMap存储
-* -change表 hashMap存储 
-* -单词记录表 hashMap存储
-* -短语记录表 hashMap存储 
+* -stop表 hashMap存储 stopWords
+* -change表 hashMap存储  changeWords
+* -单词记录表 hashMap存储 wordCount
+* -短语记录表 hashMap存储  vocabulary
 */ 
 class WordFrequence{
 	public:
 		//最大输出个数，默认全部 
 		static int maxNum; 
+		static int vocabularyLenth; 
 		static unordered_map<string,int> wordCount;
 		static unordered_map<string,int> stopWords;
+		static unordered_map<string,int> vocabulary;
+		static unordered_map<string,string> changeWords;
 	public:
 		//载入文件 
 		static void loadFile(char * path){
@@ -120,8 +139,13 @@ class WordFrequence{
 			FileUtil::read(path,words);
 			for(auto&str:words){
 				//先查询禁止的词 
-				if(!stopWords.count(str))
+				if(!stopWords.count(str)){
+					//动词归一化 
+					if(changeWords.count(str)){
+						str = changeWords[str];
+					}
 					wordCount[str]++;
+				}
 			}
 		}
 		//载入文件 
@@ -145,6 +169,20 @@ class WordFrequence{
 				stopWords[str]++;
 			}
 		}
+		//载入不加载单词文件 
+		static void loadchangeWords(char * path){
+			vector<string> words;
+			FileUtil::read(path,words);
+			string from = "",to = ""; 
+			for(auto&str:words){
+				//查询禁止的词 
+				if(from == "") from = str;
+				else{
+					from = "";
+					changeWords[from]  =to;
+				}
+			}
+		}
 		//打印单词 
 		static void print(){
 			vector<pair<string,int>> w; 
@@ -157,8 +195,8 @@ class WordFrequence{
 			for(auto& node:w){
 				if(maxNum != -1){
 					if(printCnt == maxNum) break;
-					printCnt++;
 				}
+				printCnt++;
 		    	cout << "No"  << printCnt << ":"  << node.first << ' ' << node.second << endl;
 			} 
 		}
@@ -181,10 +219,12 @@ class WordFrequence{
 			out.close();
 		} 
 };
-int WordFrequence::maxNum = 10;
+int WordFrequence::maxNum = -1;
+int WordFrequence::vocabularyLenth = -1;
 unordered_map<string,int> WordFrequence::wordCount;
 unordered_map<string,int> WordFrequence::stopWords;
-
+unordered_map<string,int> WordFrequence::vocabulary;
+unordered_map<string,string> WordFrequence::changeWords;
 
 /**
 * @命令类 
@@ -204,9 +244,9 @@ int main(int argc,char *argv[])
     {  
         cout<<"argument["<<i<<"] is: "<<argv[i]<<endl;  
     }  
-    WordFrequence::loadStopWords("stopwords_en.txt");
-    //WordFrequence::loadFile("one.txt");
-    WordFrequence::loadPath("C:\\Users\\404name\\Desktop\\CTGU_Software_Engineering_Work");
+    //WordFrequence::loadStopWords("stopwords_en.txt");
+    WordFrequence::loadFile("test1.txt");
+    //WordFrequence::loadPath("C:\\Users\\404name\\Desktop\\CTGU_Software_Engineering_Work");
     WordFrequence::print();
     WordFrequence::save("save.txt");
     system("pause"); 
