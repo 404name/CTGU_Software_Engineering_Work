@@ -4,6 +4,8 @@
 
 > 仓库在线预览：【[点我](https://github1s.com/404name/CTGU_Software_Engineering_Work)】
 
+> 作业发布地址：【[点我](https://star.jmhui.com.cn/p1/366.html)】
+
 | 文件夹 | 	内容 | 	时间 | 
 |  ----  | ----  |----  |
 | EP1 编程基本练习	 | 三个基本编程实验 | 	2021/9/13 | 
