@@ -1,47 +1,24 @@
-#include<iostream>
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-void getNext(int* returnnext, string p){
-	
-	int max = p.length();
-	
-	int next[max];
-	
-	next[0] = -1;
-	
-	int k = -1;
-
-	int j = 0;
-	
-	while (j < p.length() - 1){
-		if (k == -1 || p[j] == p[k]){
-			next[++j] = ++k;
-			//cout << "第" << j - 1 << "个:" << next[j] << endl; 
+class Solution{
+	public:
+		int check(vector<int> &arr){
+			int sum = 0;
+			for(auto &num:arr){
+				sum += num;
+				if(sum < 0) sum = 0;
+			}
+			return sum;
 		}
-		else{
-			k = next[k];
-		}
-	}	
-	
-	returnnext = next;
-}
+}; 
 
-int main(){
-	
-	string p = "ABABAABBBABABAB";
-	
-	int *next;
-	
-	getNext(next, p);
-	
-	for (int i = 0; i < p.length() - 1; i++){
-		
-		cout << "输出中" << "第" << i + 1 << "个:" << next[i] << ' ' << endl; 
-			
-	}
-	
-	/*cout << endl;*/
-	
-	
-	return 0;
+int main()
+{
+    Solution solution;
+    vector<int> vec{1, -2, 3,-2, 5, 1};
+    cout << solution.check(vec) << endl;
+    // return 7
+    return 0;
 }
