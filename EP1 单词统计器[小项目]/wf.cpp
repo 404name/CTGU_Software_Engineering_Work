@@ -1,6 +1,17 @@
 #include <bits/stdc++.h> 
 #include <iostream>  
-  
+#include <io.h> //µİ¹é¶ÁÈ¡ÎÄ¼ş 
+/*
+* @Author CTGU_LLZ
+* @³ÌĞò  ÎÄ¼şµ¥´Ê·ÖÎöÆ÷
+* @Ê¹ÓÃ  µ±Ç°ÎÄ¼şcmd´°¿ÚÏÂÊäÈëwf²é¿´help 
+/*
+¡¾ÏîÄ¿ĞèÇó·ÖÎö¡¿ 
+1. Óï·¨¼ì²â[¼ì²âÓï·¨|ÌáÊ¾ÃüÁî|È·ÈÏÃüÁî]
+2. ¿ÉÊÓ»¯½çÃæ
+3. ÎÄ¼ş¶ÁÈ¡Êä³ö[ÎÄ¼ş¶ÁÈ¡Ê±¼äÍ³¼Æ|] 
+4.  ¿ª·¢ÕßĞÅÏ¢ 
+*/ 
 using namespace std;  
 bool cmp(const pair<string,int>&a,const pair<string,int>&b){
 	if(a.second != b.second)
@@ -9,22 +20,21 @@ bool cmp(const pair<string,int>&a,const pair<string,int>&b){
 }
 
 /**
-* @è¯»å–æ–‡ä»¶ç±» 
-* -æŒ‡å®šæ–‡ä»¶è¯»å– 
-* -æŒ‡å®šæ–‡ä»¶å¤¹è¯»å– 
-* -æŒ‡å®šæ–‡ä»¶è¾“å‡ºå†…å®¹ 
+* @¶ÁÈ¡ÎÄ¼şÀà 
+* -Ö¸¶¨ÎÄ¼ş¶ÁÈ¡ 
+* -Ö¸¶¨ÎÄ¼ş¼Ğ¶ÁÈ¡ 
+* -Ö¸¶¨ÎÄ¼şÊä³öÄÚÈİ 
 */
 class FileUtil{
 	public:
 		/**
-		* è¯»å–æ–‡ä»¶åœ°å€ è¿”å› å•è¯ 
-		* @file_path æ–‡ä»¶åœ°å€ 
+		* ¶ÁÈ¡ÎÄ¼şµØÖ· ·µ»Ø µ¥´Ê 
+		* @file_path ÎÄ¼şµØÖ· 
 		*/
-		static vector<string> read(char* file_path)
+		static void read(char* file_path,vector<string> &vec)
 		{
 		    ifstream fin(file_path); 
 		    string strWord("");
-		    vector<string> vec;
 		    string str;
 		    char c;
 		    while(fin.get(c))
@@ -47,44 +57,114 @@ class FileUtil{
 			}
 		    if(fin.is_open())
 		        fin.close();
-		    return vec;
+		}
+		/**
+		* ¶ÁÈ¡ÎÄ¼şÂ·¾¶ÏÂËùÓĞÎÄ¼ş 
+		*
+		*/
+		static void getFileNames(string path,vector<string>& files)
+		{
+			//ÎÄ¼ş¾ä±ú
+			//×¢Òâ£ºÓĞĞ©ÕÂ´úÂë´Ë´¦ÊÇlongÀàĞÍ£¬Êµ²âÔËĞĞÖĞ»á±¨´í·ÃÎÊÒì³£
+			intptr_t hFile = 0;
+			//ÎÄ¼şĞÅÏ¢
+			struct _finddata_t fileinfo;
+			string p;
+			if ((hFile = _findfirst(p.assign(path).append("\\*").c_str(), &fileinfo)) != -1)
+			{
+				do
+				{
+					//Èç¹ûÊÇÄ¿Â¼,µİ¹é²éÕÒ
+					//Èç¹û²»ÊÇ,°ÑÎÄ¼ş¾ø¶ÔÂ·¾¶´æÈëvectorÖĞ
+					if ((fileinfo.attrib & _A_SUBDIR))
+					{
+						if (strcmp(fileinfo.name, ".") != 0 && strcmp(fileinfo.name, "..") != 0)
+							getFileNames(p.assign(path).append("\\").append(fileinfo.name), files);
+					}
+					else
+					{
+						//±£Ö¤ÊÇ.txt½áÎ²²Å¼ÓÈë 
+						string strPath = p.assign(path).append("\\").append(fileinfo.name);
+						if(strPath.size() > 4 && strPath.substr(strPath.size()-4,4) == ".txt"){
+							files.push_back(strPath);
+						} 
+						
+					}
+				} while (_findnext(hFile, &fileinfo) == 0);
+				_findclose(hFile);
+			}
 		}
 
 };
 
 
-/*
-ã€é¡¹ç›®éœ€æ±‚åˆ†æã€‘ 
-1. è¯­æ³•æ£€æµ‹[æ£€æµ‹è¯­æ³•|æç¤ºå‘½ä»¤|ç¡®è®¤å‘½ä»¤]
-2. å¯è§†åŒ–ç•Œé¢
-3. æ–‡ä»¶è¯»å–è¾“å‡º[æ–‡ä»¶è¯»å–æ—¶é—´ç»Ÿè®¡|] 
-4.  å¼€å‘è€…ä¿¡æ¯ 
+
+
+/**
+* @È«¾Ö¹¤¾ßÀà 
+* -stop±í hashMap´æ´¢
+* -change±í hashMap´æ´¢ 
+* -µ¥´Ê¼ÇÂ¼±í hashMap´æ´¢
+* -¶ÌÓï¼ÇÂ¼±í hashMap´æ´¢ 
 */ 
 class WordFrequence{
 	public:
-		//æœ€å¤§è¾“å‡ºä¸ªæ•°ï¼Œé»˜è®¤å…¨éƒ¨ 
+		//×î´óÊä³ö¸öÊı£¬Ä¬ÈÏÈ«²¿ 
 		static int maxNum; 
 		static unordered_map<string,int> wordCount;
 		static unordered_map<string,int> stopWords;
 	public:
-		//è½½å…¥æ–‡ä»¶ 
-		static void load(char *path){
-			vector<string> words = FileUtil::read(path);
+		//ÔØÈëÎÄ¼ş 
+		static void loadFile(char * path){
+			vector<string> words;
+			FileUtil::read(path,words);
 			for(auto&str:words){
-				//å…ˆæŸ¥è¯¢ç¦æ­¢çš„è¯ 
+				//ÏÈ²éÑ¯½ûÖ¹µÄ´Ê 
 				if(!stopWords.count(str))
 					wordCount[str]++;
 			}
 		}
-		//è½½å…¥æ–‡ä»¶ 
-		static void loadStopWords(char *path){
-			vector<string> words = FileUtil::read(path);
+		//ÔØÈëÎÄ¼ş 
+		static void loadPath(char * path){
+			vector<string> files;
+			FileUtil::getFileNames(path,files);
+			for(auto&file:files){
+				cout << "ÕıÔÚ¼ÓÔØ" << file << endl; 
+				 char charPath[file.size() + 5];
+				 file.copy(charPath, file.size(), 0);//ÕâÀï5´ú±í¸´ÖÆ¼¸¸ö×Ö·û£¬0´ú±í¸´ÖÆµÄÎ»ÖÃ£¬
+				 *(charPath+file.size())='\0';//×¢ÒâÊÖ¶¯¼Ó½áÊø·û£¡£¡£¡
+				loadFile(charPath);
+			}
+		}
+		//ÔØÈë²»¼ÓÔØµ¥´ÊÎÄ¼ş 
+		static void loadStopWords(char * path){
+			vector<string> words;
+			FileUtil::read(path,words);
 			for(auto&str:words){
+				//²éÑ¯½ûÖ¹µÄ´Ê 
 				stopWords[str]++;
 			}
 		}
-		//æ‰“å°å•è¯ 
+		//´òÓ¡µ¥´Ê 
 		static void print(){
+			vector<pair<string,int>> w; 
+		    for(auto& node:wordCount){
+		    	w.push_back(node);
+			} 
+			// map²»ÄÜÅÅĞò£¬ÔòÓÃvector´úÀíÅÅĞò 
+			sort(w.begin(),w.end(),cmp);
+			int printCnt = 0;
+			for(auto& node:w){
+				if(maxNum != -1){
+					if(printCnt == maxNum) break;
+					printCnt++;
+				}
+		    	cout << "No"  << printCnt << ":"  << node.first << ' ' << node.second << endl;
+			} 
+		}
+		//±£´æµ½±¾µØ 
+		static void save(char * inPath){
+		    ofstream out(inPath);
 			vector<pair<string,int>> w; 
 		    for(auto& node:wordCount){
 		    	w.push_back(node);
@@ -96,11 +176,10 @@ class WordFrequence{
 					if(printCnt == maxNum) break;
 					printCnt++;
 				}
-		    	cout << "No"  << printCnt << ":"  << node.first << ' ' << node.second << endl;
+		    	out << "No"  << printCnt << ":"  << node.first << ' ' << node.second << endl;
 			} 
-		}
-		//ä¿å­˜åˆ°æœ¬åœ° 
-		static void save(){} 
+			out.close();
+		} 
 };
 int WordFrequence::maxNum = 10;
 unordered_map<string,int> WordFrequence::wordCount;
@@ -108,9 +187,9 @@ unordered_map<string,int> WordFrequence::stopWords;
 
 
 /**
-* @å‘½ä»¤ç±» 
-* -å‘½ä»¤
-* -å‘½ä»¤è¯´æ˜ 
+* @ÃüÁîÀà 
+* -ÃüÁî
+* -ÃüÁîËµÃ÷ 
 */
 class Command{
 	public:
@@ -119,25 +198,16 @@ class Command{
 		string description;
 };
 
-
-
-
-
-/**
-* @å…¨å±€å·¥å…·ç±» 
-* -stopè¡¨ hashMapå­˜å‚¨
-* -changeè¡¨ hashMapå­˜å‚¨ 
-* -å•è¯è®°å½•è¡¨ hashMapå­˜å‚¨
-* -çŸ­è¯­è®°å½•è¡¨ hashMapå­˜å‚¨ 
-*/ 
 int main(int argc,char *argv[])  
 {  
     for(int i=0;i<argc;i++)  
     {  
         cout<<"argument["<<i<<"] is: "<<argv[i]<<endl;  
     }  
-    WordFrequence::loadStopWords("stopwords.txt");
-    WordFrequence::load("one.txt");
+    WordFrequence::loadStopWords("stopwords_en.txt");
+    //WordFrequence::loadFile("one.txt");
+    WordFrequence::loadPath("C:\\Users\\404name\\Desktop\\CTGU_Software_Engineering_Work");
     WordFrequence::print();
-    system("pause");  
+    WordFrequence::save("save.txt");
+    system("pause"); 
 }  

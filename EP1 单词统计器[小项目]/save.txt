@@ -1,0 +1,10 @@
+No1:time 39622
+No2:day 27311
+No3:life 23737
+No4:hand 20317
+No5:eyes 20236
+No6:house 19053
+No7:night 17921
+No8:sir 17754
+No9:head 16925
+No10:love 16824
