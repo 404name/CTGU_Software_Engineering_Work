@@ -6,7 +6,7 @@
 
 > 作业发布地址：【[点我](https://star.jmhui.com.cn/p1/366.html)】
 
-![效果展示](https://gitee.com/N404name/gitee-img/raw/master/myImg/~J6OVP4%5DD%60JH8HR)R6O62HB.png)
+![效果展示](https://gitee.com/N404name/gitee-img/raw/master/myImg/dwadwadwadaadx.png)
 
 | 文件夹 | 	内容 | 	时间 | 
 |  ----  | ----  |----  |
