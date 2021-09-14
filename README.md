@@ -6,13 +6,13 @@
 
 > 作业发布地址：【[点我](https://star.jmhui.com.cn/p1/366.html)】
 
+![效果展示](https://gitee.com/N404name/gitee-img/raw/master/myImg/~J6OVP4%5DD%60JH8HR)R6O62HB.png)
+
 | 文件夹 | 	内容 | 	时间 | 
 |  ----  | ----  |----  |
 | EP1 编程基本练习	 | 三个基本编程实验 | 	2021/9/13 | 
 | EP1 单词统计器[小项目] | 	一个综合的单词统计小程序 | 	2021/9/13 | 
 | 【🎈待添加】 | 	【🎈待添加】	 | 【🎈待添加】 | 
-
-![](https://gitee.com/N404name/gitee-img/raw/master/myImg/~J6OVP4%5DD%60JH8HR)R6O62HB.png)
 
 # 使用方法
 > 在当前文件下开启cmd窗口，**输入wf查看提示**
