@@ -27,14 +27,16 @@ class FileUtil{
 		* 读取文件地址 返回 单词 
 		* @file_path 文件地址 
 		*/
-		static void read(char* file_path,vector<string> &vec)
+		static void read(char* file_path,vector<string> &vec,int lenth)
 		{
+			queue<string> strQue;
 		    ifstream fin(file_path); 
 		    string strWord("");
 		    string str = "";
 		    char c;
 		    while(fin.get(c))
 		    {
+		    	bool ifCheck = false; 
 		        if(c >= 'a' && c <= 'z'){
 		        	str += c;
 				}else if(c >= 'A' && c <= 'Z'){
@@ -53,23 +55,40 @@ class FileUtil{
 							str += c; 
 						}
 					}else{
-						if(str != ""){
-			                vec.push_back(str); 
-						}
-			            str = "";
+						ifCheck = true;
 					}
 				}
 		        else
 		        {
-		            if(str != ""){
-		                vec.push_back(str); 
+		            ifCheck = true;
+		        }
+		        if(ifCheck){
+		        	if(str != ""){
+		                strQue.push(str); 
 					}
 		            str = "";
-		        } 
+	                if(strQue.size() == lenth) {
+	                    string res = strQue.front();
+	                    strQue.pop();
+	                    vector<string> tempStr;
+						//取出队列内容 
+	                    while(strQue.size()){
+	                    	tempStr.push_back(strQue.front());
+	                        res += " ";
+	                        res += strQue.front();
+	                        strQue.pop();
+	                    }
+	                    vec.push_back(res);
+	                    //去除第一个后又回队列； 
+	                    for(auto& str:tempStr){
+	                    	strQue.push(str);
+						}
+	                }
+	                if(c != ' '){
+	                    while (!strQue.empty()) strQue.pop();
+	                }
+				}
 		    }
-		    if(str != ""){
-		        vec.push_back(str); 
-			}
 		    if(fin.is_open())
 		        fin.close();
 		}
@@ -137,7 +156,7 @@ class WordFrequence{
 		//载入文件 
 		static void loadFile(char * path){
 			vector<string> words;
-			FileUtil::read(path,words);
+			FileUtil::read(path,words,vocabularyLenth);
 			for(auto&str:words){
 				//先查询禁止的词 
 				if(!stopWords.count(str)){
@@ -164,7 +183,7 @@ class WordFrequence{
 		//载入不加载单词文件 
 		static void loadStopWords(char * path){
 			vector<string> words;
-			FileUtil::read(path,words);
+			FileUtil::read(path,words,1);
 			for(auto&str:words){
 				//查询禁止的词 
 				stopWords[str]++;
@@ -173,7 +192,7 @@ class WordFrequence{
 		//载入不加载单词文件 
 		static void loadchangeWords(char * path){
 			vector<string> words;
-			FileUtil::read(path,words);
+			FileUtil::read(path,words,1);
 			string from = "",to = ""; 
 			for(auto&str:words){
 				//查询禁止的词 
@@ -220,12 +239,7 @@ class WordFrequence{
 			out.close();
 		} 
 };
-int WordFrequence::maxNum = -1;
-int WordFrequence::vocabularyLenth = -1;
-unordered_map<string,int> WordFrequence::wordCount;
-unordered_map<string,int> WordFrequence::stopWords;
-unordered_map<string,int> WordFrequence::vocabulary;
-unordered_map<string,string> WordFrequence::changeWords;
+
 
 /**
 * @命令类 
@@ -239,25 +253,85 @@ class Command{
         static vector<Command*> commandList;
         bool isActive;
         string cmdName;
+        string cmdKey;
+        string cmdTip; 
         string description;
         string arg;
         string error;
     public:
-    	Command(string name,string des){
+    	Command(string key,string name,string des,string tip){
+    		cmdKey = key;
             cmdName = name;
             description = des;
     		isActive = false;
+    		cmdTip = tip;
     		arg = "";
     		error = "";
 		};
+		static bool praseCmd(int argc,char *argv[]){
+			for(int i=1;i<argc;i++)  
+		    {  
+		        string argKey = argv[i];
+		        string argValue = ""; 
+		        //先匹配第一个参数命令 
+		        if(!commands.count(argKey)){
+		        	cout << "【错误】找不到参数" << argKey << endl; 
+		        	return false;
+				}else{
+					i++;
+					if( i >= argc){
+						cout << "缺少参数" << endl;
+						return false; 
+					}
+					//匹配第二个参数检测是否是 -s -t两层命令 
+					argValue = argv[i];
+					if(commands.count(argValue)){
+						//是一个2长度命令则继续拿 
+			        	//拿第三个参数 
+			        	argKey+=argValue;
+			        	if(!commands.count(argKey)) {
+				        	cout << "【错误】找不到参数" << argKey << endl; 
+				        	return false;
+						}
+			        	i++;
+			        	if( i >= argc){
+							cout << "缺少参数" << endl;
+							return false; 
+						}
+						argValue = argv[i];
+					}
+				}
+				//拿到一对命令和值
+				commands[argKey]->isActive = true;
+				commands[argKey]->arg = argValue; 
+		    }
+		    return true;
+		}
 		static void confirmCommandList(){
+			cout << "[解析]：你的操作如下" << endl;
 			for(auto &command:commandList){
-                command->print();
+				if(command->isActive)
+                	command->printTip();
+            }
+            cout << "[确认]：Y/N "<< endl; 
+            for(auto &command:commandList){
+				if(command->isActive){
+					string key = command->cmdKey;
+					char* arg = const_cast<char *>(command->arg.c_str());
+					if(key == "-x-f") WordFrequence::loadStopWords(arg);
+					else if(key == "-v") WordFrequence::loadchangeWords(arg);
+					else if(key == "-s") WordFrequence::save(arg);
+					else if(key == "-n") WordFrequence::maxNum = atoi(arg);
+					else if(key == "-p") WordFrequence::vocabularyLenth = atoi(arg);
+					else if(key ==  "-f") WordFrequence::loadFile(arg);
+					else if(key == "-d") WordFrequence::loadPath(arg);
+					else if(key == "-d-s") WordFrequence::loadPath(arg);
+				}
             }
         }
     	static void showHelp(){
     		cout << "[用法]：wf [-options] [args]" << endl;
-			cout << "[例子]：wf -f one.txt -n 10 -s save.txt"<< endl; 
+			cout << "[例子]：wf -f one.txt -n 10 -s save.txt -x -f stopwords_en.txt"<< endl; 
 			cout << "[解释]：读取one，输出前10高频词汇，且存入save,选项不分前后，系统自带检测排序功能"<< endl; ;
 			cout << "其中选项包括" << endl; 
 			for(auto &command:commandList){
@@ -271,42 +345,68 @@ class Command{
         void print(){
         	printf("    %-15s%s\n",cmdName.c_str(),description.c_str());
         }
+        void printTip(){
+        	printf("%-15s%s\n",cmdTip.c_str(),arg.c_str());
+        }
 
 };
-map<string,Command*> Command::commands;
-vector<Command*> Command::commandList;
+
+//初始化静态成员对象 
+	int WordFrequence::maxNum = 8;
+	int WordFrequence::vocabularyLenth = 1;
+	unordered_map<string,int> WordFrequence::wordCount;
+	unordered_map<string,int> WordFrequence::stopWords;
+	unordered_map<string,int> WordFrequence::vocabulary;
+	unordered_map<string,string> WordFrequence::changeWords;
+	map<string,Command*> Command::commands;
+	vector<Command*> Command::commandList;
+void initData(){
+	
+	// help
+	Command::commands["-x"] = new Command("-x","-x [文件]","读取停词表文件,过滤单词","读取停词表->");    
+	// 
+	Command::addCommand("====",new Command("====","--------------","【可选】载入转换文件"," "));
+    Command::addCommand("-x-f", new Command("-x-f","-x -f [文件]","读取停词表文件,过滤单词","读取停词表->"));
+    Command::addCommand("-v", new Command("-v","-v [文件]","读取转换表文件,转换原型","读取转换表->"));
+   
+    
+    Command::addCommand("++++", new Command("++++","--------------","【可选】输出设定"," "));
+	Command::addCommand("-n", new Command("-n","-n [单词数量]","结果取频率最高前N个(默认全部)","显示单词数量->"));
+	Command::addCommand("-p", new Command("-p","-p [短语长度]","设定输出短语长度(默认为单词长度为1)","输出短语长度->"));
+	 
+    Command::addCommand("----", new Command("----","--------------","【必选】载入文本文件"," "));
+    Command::addCommand("-f", new Command("-f","-f [文件]","加载文本文件","加载文本资源->"));
+    Command::addCommand("-d", new Command("-d","-d [文件夹]","读取当前文件夹下所有文本文件","加载文件夹->"));
+    Command::addCommand("-d-s", new Command("-d-s","-d -s [文件夹]","递归读取当前文件夹下所有文本文件","加载路径资源->"));
+     Command::addCommand("****", new Command("****","--------------","【可选】指定输出目录"," "));
+     Command::addCommand("-s", new Command("-s","-s [文件]","存储结果至文件内","存储文件至->"));
+}
+
+
 
 int main(int argc,char *argv[])  
 {  
-    for(int i=0;i<argc;i++)  
-    {  
-        cout<<"argument["<<i<<"] is: "<<argv[i]<<endl;  
-    }  
-    
-    // help
-    Command::addCommand("====",new Command("--------------","【可选】载入转换文件"));
-    Command::addCommand("-x-f", new Command("-x -f [文件]","读取停词表文件,过滤单词"));
-    Command::addCommand("-v", new Command("-v [文件]","读取转换表文件,转换原型"));
-    Command::addCommand("-s", new Command("-s [文件]","存储结果至文件内"));
-    
-    Command::addCommand("++++", new Command("--------------","【可选】输出设定"));
-	Command::addCommand("-n", new Command("-n [单词数量]","结果取频率最高前N个(默认全部)"));
-	Command::addCommand("-p", new Command("-p [短语长度]","设定输出短语长度(默认为单词长度为1)"));
-	 
-    Command::addCommand("----", new Command("--------------","【必选】载入文本文件"));
-    Command::addCommand("-f", new Command("-f [文件]","加载文本文件"));
-    Command::addCommand("-d", new Command("-d [文件夹]","读取当前文件夹下所有文本文件"));
-    Command::addCommand("-d-s", new Command("-d -s [文件夹]","递归读取当前文件夹下所有文本文件"));
-    
-	
-	Command::showHelp();
-	
-	
-    
-    //WordFrequence::loadStopWords("stopwords_en.txt");
-    WordFrequence::loadFile("test1.txt");
+	initData();
+	//WordFrequence::loadStopWords("stopwords_en.txt");
     //WordFrequence::loadPath("C:\\Users\\404name\\Desktop\\CTGU_Software_Engineering_Work");
-    WordFrequence::print();
-    WordFrequence::save("save.txt");
+    //WordFrequence::print();
+    //WordFrequence::save("save.txt");
+    
+	if(argc == 1){
+		//存在输入 
+		Command::showHelp();
+	}else{
+		bool cmdIsRight = Command::praseCmd(argc,argv);
+		if(cmdIsRight){
+			Command::confirmCommandList();
+		    WordFrequence::print();
+		}else{
+			Command::showHelp();
+			cout << endl << "命令解析失败，请参考标准命令" << endl;
+			cout << "1. 文件地址支持绝对/相对，但路径要用\\" << endl;
+			cout << "2. 确保文本资源按照格式输入" << endl; 
+		}
+	}
+   
     system("pause"); 
 }  
