@@ -1,5 +1,8 @@
 # CTGU_Software_Engineering_Work
 😘三峡大学2021秋季学期软件工程作业
+> 使用C++通过规范的封装结合自写的词汇解析算法快速完成实验需求。
+底层均为个人实现未调用任何第三方库文件。一天时间完成功能实现。仓库暂停更新。 
+
 > 仓库管理员: 【[CTGU_LLZ](https://www.yuque.com/404name/blog/cbt8cl)】
 
 > 仓库在线预览：【[点我](https://github1s.com/404name/CTGU_Software_Engineering_Work)】
@@ -22,6 +25,42 @@
 > git仓库不支持100mb文件|因此测试文件未上传
 > 
 文件测试后续更新
+# 测试数据集
+> 600部小说（github仓库大文件未能上传仅展示测试数据）
+
+> 测试指令：**wf -d ./600篇英文小说 -s res.txt -x -f stopwords_en.txt -n 100 -p 3** 
+
+输出长度为3的词汇并且存在res里面
+```
+....省略
+正在加载./600篇英文小说\Where the Blue Begins(蓝调从何而起)_Password_Removed.txt
+正在加载./600篇英文小说\White Fang(白牙)_Password_Removed.txt
+正在加载./600篇英文小说\Who Was Who_5000 B_Password_Removed.txt
+正在加载./600篇英文小说\Why Go To College(为什么上大学)_Password_Removed.txt
+正在加载./600篇英文小说\Wives and Daughters(妻子与女儿)_Password_Removed.txt
+正在加载./600篇英文小说\Worldly Ways and Byways(世俗之路)_Password_Removed.txt
+正在加载./600篇英文小说\Wreck of the Golden Mary(金玛丽的遗骸)_Password_Removed.txt
+正在加载./600篇英文小说\Wyoming(怀俄明)_Password_Removed.txt
+正在加载./600篇英文小说\Yankee Gypsies(美国吉普赛人)_Password_Removed.txt
+正在加载./600篇英文小说\[19th Century Actor] AUTOBIOGRAPHY(十九世纪男演员自传)_Password_Removed.txt
+No1:charles dickens elecbook 6398
+No2:dickens elecbook classics 6398
+No3:one of the 6216
+No4:out of the 5473
+No5:it was a 4395
+No6:there was a 4380
+No7:that he was 3103
+No8:that he had 2986
+No9:i do not 2831
+No10:that it was 2789
+No11:there was no 2736
+No12:it is a 2703
+No13:it is not 2591
+No14:it would be 2564
+No15:he had been 2563
+No16:he did not 2536
+....省略
+```
 
 # 更新 && 开发进度
 > 【===============>】**进度100**
@@ -206,22 +245,19 @@ No8:dare to 1
 ## FileUtil处理所有文件相关
 | 成员对象                                 | 功能                                      | 备注                   |
 | ---------------------------------------- | ----------------------------------------- | ---------------------- |
-| static void loadFile(char * path)        | 调用FileUtil解析文件返回单词表            | 【仿单例模式】静态方法 |
-| static void loadPath(char * path)        | 解析地址下所有txt，再调用loadFile读取所有 | 【仿单例模式】静态方法 |
-| static void loadStopWords(char * path)   | 读取停词表                                | 【仿单例模式】静态方法 |
-| static void loadchangeWords(char * path) | 读取动词-原型 表                          | 【仿单例模式】静态方法 |
-| static void print()                      | 打印top单词                               | 【仿单例模式】静态方法 |
-| static void save(char * inPath)          | 保存再本地                                | 【仿单例模式】静态方法 |
+| static void read(char* file_path,vector<string> &vec,int lenth)      | 读取文件并且寻找长度为N的词汇存vec            | 【仿单例模式】静态方法 |
+| static void getFileNames(string path,vector<string>& files)      | 解析文件夹内所有文件并且文件存files内方便再遍历去读取 | 【仿单例模式】静态方法 |
+
 
 
 ## Command封装命令相关功能
 命令提示|检查|调整
 | 成员对象                                 | 功能                                      | 备注                   |
 | ---------------------------------------- | ----------------------------------------- | ---------------------- |
-| static void loadFile(char * path)        | 调用FileUtil解析文件返回单词表            | 【仿单例模式】静态方法 |
-| static void loadPath(char * path)        | 解析地址下所有txt，再调用loadFile读取所有 | 【仿单例模式】静态方法 |
+|static bool praseCmd(int argc,char *argv[]) | 获取cmd里面的命令并且统一处理封装并且检测语法      | 【仿单例模式】静态方法 |
+|static void confirmCommandList()     |确认命令列表 | 【仿单例模式】静态方法 |
 | static void loadStopWords(char * path)   | 读取停词表                                | 【仿单例模式】静态方法 |
-| static void loadchangeWords(char * path) | 读取动词-原型 表                          | 【仿单例模式】静态方法 |
-| static void print()                      | 打印top单词                               | 【仿单例模式】静态方法 |
-| static void save(char * inPath)          | 保存再本地                                | 【仿单例模式】静态方法 |
-
+|static void showHelp() | 当语法错误或者无输入时调用显示使用手册   | 【仿单例模式】静态方法 |
+|static void addCommand(string key,Command * command)              | 添加指令到指令集        | 【仿单例模式】静态方法 |
+| void print(){    | 指令输出自己的内容           | 对象调用 |
+| void printTip(){    | 指令输出自己的提示           | 对象调用 |
