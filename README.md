@@ -1,4 +1,4 @@
-# CTGU_Software_Engineering_Work
+# [CTGU_Software_Engineering_Work](https://404name.github.io/CTGU_Software_Engineering_Work/)
 😘三峡大学2021秋季学期软件工程作业
 > 使用C++通过规范的封装结合自写的词汇解析算法快速完成实验需求。
 底层均为个人实现未调用任何第三方库文件。一天时间完成功能实现。仓库暂停更新。 
