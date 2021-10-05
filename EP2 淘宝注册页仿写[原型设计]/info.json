@@ -1,0 +1,215 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://login.taobao.com/member/login.jhtml?spm=a21bo.21814703.754894437.1.5af911d9t2dWiR&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+            "path": "index.html",
+            "saved": true,
+            "size": 37633,
+            "children": [
+                {
+                    "url": "https://gtms01.alicdn.com/tps/i1/TB1GTCYLXXXXXcHXpXXcoeQ2VXX-2500-600.jpg",
+                    "path": "img/TB1GTCYLXXXXXcHXpXXcoeQ2VXX-2500-600.jpeg",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "http://img.alicdn.com/tps/i1/T1FeW3XXNfXXXXXXXX-36-36.gif",
+                    "path": "img/T1FeW3XXNfXXXXXXXX-36-36.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://img.alicdn.com/tfs/TB1EPnIQXXXXXaSXpXXXXXXXXXX-1133-35.jpg",
+                    "path": "img/TB1EPnIQXXXXXaSXpXXXXXXXXXX-1133-35.jpeg",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://img.alicdn.com/tfs/TB1N7kwRVXXXXbAapXXXXXXXXXX-500-127.png_250x250",
+                    "path": "img/TB1N7kwRVXXXXbAapXXXXXXXXXX-500-127.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://x.alicdn.com/vip/havana-nlogin/0.6.4/index.js",
+                    "path": "js/index.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://x.alicdn.com/vip/havana-nlogin/0.6.4/index.css",
+                    "path": "css/index.css",
+                    "saved": true,
+                    "size": 53596,
+                    "children": [
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.eot?t=1583155643581",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.eot?t=1583155643581#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.woff?t=1583155643581",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.ttf?t=1583155643581",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.svg?t=1583155643581#iconfont",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tfs/TB1cF64cbGYBuNjy0FoXXciBFXa-16-336.png",
+                            "path": "img/TB1cF64cbGYBuNjy0FoXXciBFXa-16-336.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1.8ugw.T1gK0jSZFrXXcNCXXa-200-200.png",
+                            "path": "img/TB1.8ugw.T1gK0jSZFrXXcNCXXa-200-200.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1CtloAMHqK1RjSZFgXXa7JXXa-19-12.png",
+                            "path": "img/TB1CtloAMHqK1RjSZFgXXa7JXXa-19-12.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png",
+                            "path": "img/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://g.alicdn.com/vip/biz-assets/0.0.18/assets/taobao_pc.css",
+                    "path": "css/taobao_pc.css",
+                    "saved": true,
+                    "size": 21897,
+                    "children": [
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_5p9sxxklneo.eot?t=1561346623542",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_5p9sxxklneo.eot?t=1561346623542#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_5p9sxxklneo.woff?t=1561346623542",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_5p9sxxklneo.ttf?t=1561346623542",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_5p9sxxklneo.svg?t=1561346623542#iconfont",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://gw.alicdn.com/tps/i2/TB1nmqyFFXXXXcQbFXXE5jB3XXX-114-114.png",
+                    "path": "img/TB1nmqyFFXXXXcQbFXXE5jB3XXX-114-114.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "login-taobao-com-ubf6xm05",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://x.alicdn.com/vip/havana-nlogin/0.6.4/index.css",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://login.taobao.com/member/login.jhtml?spm=a21bo.21814703.754894437.1.5af911d9t2dWiR&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+            "statusCode": 200,
+            "headers": {
+                "date": "Tue, 05 Oct 2021 10:53:01 GMT",
+                "content-type": "text/html;charset=UTF-8",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "ufe-result": "A6",
+                "vary": "Accept-Encoding",
+                "set-cookie": [
+                    "XSRF-TOKEN=4bc43796-0e36-4d44-908c-d7b76eb31e1e; Path=/; HttpOnly",
+                    "_samesite_flag_=true; Domain=.taobao.com; Path=/; Secure; HttpOnly",
+                    "cookie2=14fd26721b5e7c842eef60114baea7a4; Domain=.taobao.com; Path=/; HttpOnly",
+                    "t=8aecb828f044eefdfa9ff45518358ff7; Domain=.taobao.com; Expires=Mon, 03-Jan-2022 10:53:01 GMT; Path=/",
+                    "_tb_token_=efe516a31be85; Domain=.taobao.com; Path=/"
+                ],
+                "htrace-id": "213d81b816334311812648605d036b",
+                "hvn-host": "havanamlogin033061129184.center.na610",
+                "p3p": "CP='CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR'",
+                "s_v": "4.0.4.3",
+                "s_ip": "457079564a63483151304752736c386656773d3d",
+                "s_tag": "285873024335988|134217728^|^^",
+                "s_ucode": "CN:CENTER",
+                "s_tid": "213d81b816334311812648605d036b",
+                "s_group": "tao-session",
+                "s_status": "STATUS_NOT_EXISTED",
+                "cache-control": "no-cache, no-store",
+                "pragma": "no-cache, no-cache, no-cache",
+                "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+                "content-language": "zh-CN",
+                "server": "Tengine/Aserver",
+                "strict-transport-security": "max-age=31536000"
+            }
+        },
+        "time": {
+            "start": "2021-10-05T10:53:00.494Z",
+            "end": "2021-10-05T10:53:12.198Z"
+        },
+        "remark": [],
+        "ip": "198.11.189.16",
+        "url": "https://login.taobao.com/member/login.jhtml?spm=a21bo.21814703.754894437.1.5af911d9t2dWiR&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+        "main": "index.html",
+        "domain": "login.taobao.com",
+        "origin": "https://login.taobao.com",
+        "totalSize": "113 kB"
+    },
+    "options": {
+        "formatter": [],
+        "url": "https://login.taobao.com/member/login.jhtml?spm=a21bo.21814703.754894437.1.5af911d9t2dWiR&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}

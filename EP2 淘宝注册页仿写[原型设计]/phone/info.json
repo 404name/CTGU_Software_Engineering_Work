@@ -1,0 +1,199 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://login.m.taobao.com/login.htm",
+            "path": "index.html",
+            "saved": true,
+            "size": 31988,
+            "children": [
+                {
+                    "url": "https://x.alicdn.com/vip/havana-nlogin/0.6.4/index.js",
+                    "path": "js/index.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://x.alicdn.com/vip/havana-nlogin/0.6.4/index.css",
+                    "path": "css/index.css",
+                    "saved": true,
+                    "size": 53596,
+                    "children": [
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.eot?t=1583155643581",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.eot?t=1583155643581#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.woff?t=1583155643581",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.ttf?t=1583155643581",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_583095_mkx2fqcegt7.svg?t=1583155643581#iconfont",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tfs/TB1cF64cbGYBuNjy0FoXXciBFXa-16-336.png",
+                            "path": "img/TB1cF64cbGYBuNjy0FoXXciBFXa-16-336.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1.8ugw.T1gK0jSZFrXXcNCXXa-200-200.png",
+                            "path": "img/TB1.8ugw.T1gK0jSZFrXXcNCXXa-200-200.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1CtloAMHqK1RjSZFgXXa7JXXa-19-12.png",
+                            "path": "img/TB1CtloAMHqK1RjSZFgXXa7JXXa-19-12.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png",
+                            "path": "img/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://g.alicdn.com/vip/biz-assets/0.0.8/assets/taobao_h5_oversea.css",
+                    "path": "css/taobao_h5_oversea.css",
+                    "saved": true,
+                    "size": 6736,
+                    "children": [
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1d0zFSXXXXXbeapXXXXXXXXXX-200-200.png",
+                            "path": "img/TB1d0zFSXXXXXbeapXXXXXXXXXX-200-200.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tfs/TB1SrhwSFXXXXXaaXXXXXXXXXXX-670-338.png",
+                            "path": "img/TB1SrhwSFXXXXXaaXXXXXXXXXXX-670-338.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1YfItSXXXXXcsXpXXXXXXXXXX-200-200.png",
+                            "path": "img/TB1YfItSXXXXXcsXpXXXXXXXXXX-200-200.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1ngz6SXXXXXblaXXXXXXXXXXX-200-200.png",
+                            "path": "img/TB1ngz6SXXXXXblaXXXXXXXXXXX-200-200.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://gw.alicdn.com/tps/i2/TB1nmqyFFXXXXcQbFXXE5jB3XXX-114-114.png",
+                    "path": "img/TB1nmqyFFXXXXcQbFXXE5jB3XXX-114-114.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "login-m-taobao-com-xrs9olx9",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://g.alicdn.com/vip/biz-assets/0.0.8/assets/taobao_h5_oversea.css",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://login.m.taobao.com/login.htm?",
+            "statusCode": 200,
+            "headers": {
+                "date": "Tue, 05 Oct 2021 11:08:08 GMT",
+                "content-type": "text/html;charset=UTF-8",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "ufe-result": "A6",
+                "vary": "Accept-Encoding",
+                "set-cookie": [
+                    "XSRF-TOKEN=d2b32c64-aee0-4c91-a61e-a657a23d52db; Path=/; HttpOnly",
+                    "_samesite_flag_=true; Domain=.taobao.com; Path=/; Secure; HttpOnly",
+                    "cookie2=1a74bc20887d1902fa3ac97cd230963c; Domain=.taobao.com; Path=/; HttpOnly",
+                    "t=fe0ee86626b80a52c7a31e4a4b4a37e2; Domain=.taobao.com; Expires=Mon, 03-Jan-2022 11:08:08 GMT; Path=/",
+                    "_tb_token_=76e51b346eb4e; Domain=.taobao.com; Path=/"
+                ],
+                "htrace-id": "0b0ba51e16334320885492034eb323",
+                "hvn-host": "havanamlogin033044234078.center.na620",
+                "p3p": "CP='CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR'",
+                "s_v": "4.0.4.3",
+                "s_ip": "457079564a2b6e677274432f50327843",
+                "s_tag": "285873024335988|134217728^|^^",
+                "s_ucode": "CN:CENTER",
+                "s_tid": "0b0ba51e16334320885492034eb323",
+                "s_group": "tao-session",
+                "s_status": "STATUS_NOT_EXISTED",
+                "cache-control": "no-cache, no-store",
+                "pragma": "no-cache, no-cache",
+                "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+                "content-language": "zh-CN",
+                "server": "Tengine/Aserver",
+                "eagleeye-traceid": "0b0ba51e16334320885492034eb323",
+                "strict-transport-security": "max-age=31536000",
+                "timing-allow-origin": "*"
+            }
+        },
+        "time": {
+            "start": "2021-10-05T11:08:07.884Z",
+            "end": "2021-10-05T11:08:13.316Z"
+        },
+        "remark": [],
+        "ip": "203.119.211.254",
+        "url": "https://login.m.taobao.com/login.htm?",
+        "main": "index.html",
+        "domain": "login.m.taobao.com",
+        "origin": "https://login.m.taobao.com",
+        "totalSize": "92.3 kB"
+    },
+    "options": {
+        "formatter": [
+            "html"
+        ],
+        "url": "https://login.m.taobao.com/login.htm?",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}

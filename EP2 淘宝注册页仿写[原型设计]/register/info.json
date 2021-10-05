@@ -1,0 +1,288 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://reg.taobao.com/member/reg/fast/union_reg?_regfrom=TB",
+            "path": "index.html",
+            "saved": true,
+            "size": 40704,
+            "children": [
+                {
+                    "url": "https://ynuf.aliapp.org/service/clear.png?xt=SHAREDPLATFORM_REGISTER:568c7705d3724b49f13c295a23fb24de&xa=SHAREDPLATFORM_REGISTER",
+                    "path": "img/clear.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://img.alicdn.com/tps/i1/T1FeW3XXNfXXXXXXXX-36-36.gif",
+                    "path": "img/T1FeW3XXNfXXXXXXXX-36-36.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/??kissy/k/1.4.7/seed-min.js,tb/global/3.5.34/global-min.js",
+                    "path": "js/index_2.js",
+                    "saved": true,
+                    "size": 81293,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/sd/nch5/index.js?t=2015052012",
+                    "path": "js/index.js",
+                    "saved": true,
+                    "size": 138308,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/??/AWSC/AWSC/awsc.js,/sd/baxia/2.0.40/baxiaCommon.js",
+                    "path": "js/index_1.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/vip/mregister/0.1.46/pages/taobao/index.js",
+                    "path": "js/index_3.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/vip/mregister/0.1.46/pages/taobao/index.css",
+                    "path": "css/index.css",
+                    "saved": true,
+                    "size": 53323,
+                    "children": [
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1WUP5gHY1gK0jSZTEXXXDQVXa-24-24.png",
+                            "path": "img/TB1WUP5gHY1gK0jSZTEXXXDQVXa-24-24.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1VHh7veL2gK0jSZFmXXc7iXXa-10-7.png",
+                            "path": "img/TB1VHh7veL2gK0jSZFmXXc7iXXa-10-7.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1DkSIvbj1gK0jSZFOXXc7GpXa-24-24.png",
+                            "path": "img/TB1DkSIvbj1gK0jSZFOXXc7GpXa-24-24.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB1gpelQpXXXXckXpXXXXXXXXXX-72-72.png",
+                            "path": "img/TB1gpelQpXXXXckXpXXXXXXXXXX-72-72.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB10oWwQpXXXXX0XXXXXXXXXXXX-72-72.png",
+                            "path": "img/TB10oWwQpXXXXX0XXXXXXXXXXXX-72-72.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://g.alicdn.com/vip/register/2.9.7/xcommon/css/base.css",
+                    "path": "css/base.css",
+                    "saved": true,
+                    "size": 3881,
+                    "children": [
+                        {
+                            "url": "https://g.alicdn.com/vip/register/2.9.7/xcommon/images/ico-circle2.png",
+                            "path": "img/ico-circle2.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/vip/register/2.9.7/xcommon/images/ico-circle1.png",
+                            "path": "img/ico-circle1.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/vip/register/2.9.7/xcommon/images/tips-arrow-up.png",
+                            "path": "img/tips-arrow-up.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/vip/register/2.9.7/xcommon/images/tips-bg.png",
+                            "path": "img/tips-bg.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1408947319_9759417.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1408947319_9759417.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1408947319_9759417.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1408947319_9759417.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1408947319_9759417.svg#iconfont",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://g.alicdn.com/tb/global/3.5.34/global-min.css",
+                    "path": "css/global-min.css",
+                    "saved": true,
+                    "size": 23982,
+                    "children": [
+                        {
+                            "url": "https://img.alicdn.com/tps/i3/TB1Z.51LXXXXXaLXpXXA3nn5pXX-755-180.png",
+                            "path": "img/TB1Z.51LXXXXXaLXpXXA3nn5pXX-755-180.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/i4/TB1d.a2LXXXXXc0XXXXaE4KRVXX-1510-360.png",
+                            "path": "img/TB1d.a2LXXXXXc0XXXXaE4KRVXX-1510-360.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/i4/T1KxCMXeNjXXXXXXXX-14-14.gif",
+                            "path": "img/T1KxCMXeNjXXXXXXXX-14-14.gif",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/i3/T1b1m3XkVpXXXXXXXX-32-32.gif",
+                            "path": "img/T1b1m3XkVpXXXXXXXX-32-32.gif",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/i2/T1hOy5XhNnXXXXXXXX-9-14.gif",
+                            "path": "img/T1hOy5XhNnXXXXXXXX-9-14.gif",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/i3/T1lni5XhXXXXXXXXXX-9-14.gif",
+                            "path": "img/T1lni5XhXXXXXXXXXX-9-14.gif",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1404888168_2057645.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1404888168_2057645.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1404888168_2057645.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1404888168_2057645.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1404888168_2057645.svg#uxiconfont",
+                            "saved": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "alias": "reg-taobao-com-so41vizl",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://g.alicdn.com/tb/global/3.5.34/global-min.css",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://reg.taobao.com/member/reg/fast/union_reg?_regfrom=TB",
+            "statusCode": 200,
+            "headers": {
+                "date": "Tue, 05 Oct 2021 10:57:08 GMT",
+                "content-type": "text/html;charset=UTF-8",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "ufe-result": "A6",
+                "vary": "Accept-Encoding",
+                "set-cookie": [
+                    "regsid=b5f8f0b25f5ab47db7db3b7977dc0dfbd8a63254; Path=/; HttpOnly",
+                    "regsc=772df3383bc543bc9079e4b89ac873789d63e58cb801f2ef84502ba2bbc313f4; Path=/; HttpOnly",
+                    "regtraceid=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure"
+                ],
+                "content-language": "zh-CN",
+                "p3p": "CP='CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR'",
+                "server": "Tengine/Aserver",
+                "eagleeye-traceid": "2133ec6216334314281731343e2612",
+                "strict-transport-security": "max-age=31536000",
+                "timing-allow-origin": "*"
+            }
+        },
+        "time": {
+            "start": "2021-10-05T10:57:07.605Z",
+            "end": "2021-10-05T10:57:22.759Z"
+        },
+        "remark": [],
+        "ip": "59.82.29.142",
+        "url": "https://reg.taobao.com/member/reg/fast/union_reg?_regfrom=TB",
+        "main": "index.html",
+        "domain": "reg.taobao.com",
+        "origin": "https://reg.taobao.com",
+        "totalSize": "341 kB"
+    },
+    "options": {
+        "formatter": [],
+        "url": "https://reg.taobao.com/member/reg/fast/union_reg?_regfrom=TB",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}

@@ -1,0 +1,244 @@
+<!doctype html>
+<!DOCTYPE html><html lang="en-US"><head><meta charset="utf-8">
+    
+            <meta name="data-spm" content="a1z5k">
+    <title>阿里巴巴集团 | 账户中心</title>
+    <meta name="keywords" content="阿里巴巴集团帐号，统一登录，帐号登录，淘宝帐号，阿里云帐号，阿里巴巴国际站帐号，云邮箱帐号，YunOS帐号，1688帐号">
+    <meta name="description" content="阿里巴巴集团帐号可以一帐号登录/使用阿里旗下网站及服务，包括：网络购物，生活支付，转账缴费，理财，YunOS，云储存，云邮箱，数字音乐，移动导航，即时通讯，社交与分享等网络生活服务。">
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/ucenter.css">
+            <link rel="stylesheet" href="">
+                <link rel="stylesheet" href="">
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+        (function(){
+            seajs.config({
+                alias: {
+                    '$': 'jquery/jquery/1.9.1/jquery'       
+                }
+            });
+        })();
+  	</script>
+</head>
+  
+
+
+<body data-spm="7633538" class="taobao"><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=0b0f957f16334314601317377ed079&asid=AQAAAACkL1xh7WQsdwAAAABjMybXNfsfbA==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+    <!--头部 start-->
+
+		
+<div id="header">
+	<div class="header-layout">
+       <h1 class="logo" id="logo">
+		   <a href="http://www.taobao.com">淘宝</a>
+		   <span class="subtitle">  </span>
+	   </h1>
+       <h2 class="logo-title"> 找回会员名 </h2>
+	        <ul class="header-nav">
+																									<li class="nav-first"><a href="http://reg.taobao.com/member/new_register.jhtml" target="_blank"> 注册 </a></li>
+																			<li><a href="https://login.taobao.com/?redirectURL=https%3A%2F%2Fpassport.taobao.com%2Fac%2Fnick_find.htm%3Ffrom_site%3D0%26lang%3Dzh_CN%26app_name%3DtbTop" target="_blank"> 登录 </a></li>
+																																													<li><a href="http://i.taobao.com/my_taobao.htm" target="_blank">  我的   淘宝</a></li>
+																							                        <li><a href="http://service.taobao.com/support/main/service_center.htm" target="_blank">  </a></li>
+																	        </ul>
+	
+   </div>
+</div>
+
+
+<!--CBU-->
+<link type="text/css" href="css/nc.css" rel="stylesheet">
+<div id="content">
+    <div class="content-layout">
+        <div class="maincenter">
+            <div class="maincenter-box">
+                <div class="maincenter-box-tip">
+                    <p class="ui-tiptext ui-tiptext-message ft-14">
+                        <i class="ui-tiptext-icon iconfont" title=" 提示 "></i>
+                         请输入你的身份证号和真实姓名用于找回账户会员名（暂只支持已完成支付宝实名认证的用户） 
+                    </p>
+                </div>
+                <form class="ui-form" id="J_Form" method="post">
+        <input name="_tb_token_" type="hidden" value="ee13e38951e6d">
+    <input type="hidden" name="action" value="nick_find_action">
+    <input type="hidden" name="event_submit_do_find" value="notNull">
+    <input id="fm-noc-ua" name="ua" type="hidden">
+    <input id="fm-umid-token" name="umidToken" value="811084fc0a17780d9e24dfe2dca8b0729140f7a9" type="hidden">
+    <div class="ui-form-item       ">
+        <label class="ui-label"> 身份证号 </label>
+        <input id="J-accName" name="_fm-n-_0-i" class="ui-input" type="text" placeholder=" 身份证号码 " value="" data-explain="">
+                </div>
+    <div class="ui-form-item">
+        <label class="ui-label"> 真实姓名 </label>
+        <input id="J-accFullName" name="fullName" class="ui-input" type="text" data-explain="">
+    </div>
+
+    <div id="_umfp" style="display:inline;width:1px;height:1px;overflow:hidden">
+        <img src="img/clear.png">
+    </div>
+
+    <div class="ui-form-item">
+        <label class="ui-label"> 验证: </label>
+        <div id="havana_nco"></div>
+        <input id="ncoSign" name="ncoSig" type="hidden">
+        <input id="ncoSessionid" name="ncoSessionid" type="hidden">
+        <input id="ncoToken" type="hidden" name="ncoToken" value="811084fc0a17780d9e24dfe2dca8b0729140f7a9">
+    </div>
+    <div class="ui-form-item ui-form-item-last">
+        <input type="submit" value=" 确定 " class="ui-button ui-button-lorange" id="submitBtn" disabled="">
+    </div>
+</form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8" src="js/nc.js"></script>
+<script type="text/javascript">
+    seajs.use(['$', 'arale/validator/0.9.5/validator'], function (jQuery, Validator) {
+        jQuery(function(){
+            var errorIcon = '<i class="ui-tiptext-icon iconfont">&#xF045;</i>';
+            var firstFocus = true;
+            var firstUrl = "";
+            var idValidated = false;
+
+
+            function showExp(ele, msg, toggleClass) {
+                var item = jQuery(ele).parent(".ui-form-item");
+                var explain = item.find(".ui-form-explain");
+                if (explain.length === 0) {
+                    explain = jQuery('<div class="ui-form-explain"></div>').appendTo(item);
+                }
+                var className = 'ui-form-item ' + toggleClass;
+                explain.html(msg);
+                item.attr('class', className);
+            };
+
+            var validator = new Validator({
+                element:"#J_Form",
+                autoSubmit: true,
+                onItemValidate:function (element) {
+                    if (jQuery(element).attr('type') === 'text') {
+                        var val = jQuery(element).val();
+                        val = jQuery.trim(val);
+                        jQuery(element).val(val);
+                    }
+                }
+            });
+
+            validator.addItem({
+                element:'#J-accName',
+                required:true,
+                errormessageRequired:errorIcon+' 身份证号不能为空 '
+
+            });
+
+            validator.addItem({
+                element:'#J-accFullName',
+                required:true,
+                errormessageRequired:errorIcon+' 真实姓名不能为空 '
+
+            });
+
+        });
+
+    });
+
+           var NC_Opt = {
+            renderTo: 'havana_nco',
+            appkey: 'CF_APP_GGK_HAVANAMPC' ,
+            scene: 'ggk_pc',
+            token :'811084fc0a17780d9e24dfe2dca8b0729140f7a9',
+            trans : {"behaviorTraceId": "0750f4954c5d3c80db3799aa077f8db7"},
+            elementID : ["J-accName"],
+            is_Opt: '',//是否自己配置uab，通常情况下留空即可
+            type: "scrape", //一定要写"scrape"，区别滑动验证码
+            width: 300, //刮刮卡交互区域的像素高度，最小为300px
+            height: 100, //刮刮卡交互区域的像素高度，最小为100px
+            isEnabled: true,
+            timeout: 3000,
+            times: 3,
+                            foreign: 0,
+                                        language:'cn',
+                        apimap: {
+            },
+            objects: ["//img.alicdn.com/tps/TB1BT9jPFXXXXbyXFXXXXXXXXXX-80-80.png"],
+            callback: function (data) { //成功回调
+                jQuery('#submitBtn').removeAttr('disabled');
+                jQuery("#ncoSign").attr("value", data.sig);
+                jQuery("#ncoSessionid").attr("value", data.sessionId);
+                jQuery("#fm-noc-ua").attr("value", _n);
+                jQuery.ajax({
+                    url:'https://passport.taobao.com/ac/password/log_no_cap.do?fromSite=0&amp;appName=tbTop&amp;lang=zh_CN',
+                    data:{
+                        code: 'success',
+                    },
+                    dataType:'json',
+                    success:function(data) {
+                    },
+                    error:function(){
+                    }
+                });
+            },
+            failCallback: function(data){ //错误回调
+                jQuery.ajax({
+                    url:'https://passport.taobao.com/ac/password/log_no_cap.do?fromSite=0&amp;appName=tbTop&amp;lang=zh_CN',
+                    data:{
+                        code: data.code,
+                    },
+                    dataType:'json',
+                    success:function(data) {
+                    },
+                    error:function(){
+                    }
+                });
+            },
+            error: function (data) {
+            }
+        };
+        var nc = new noCaptcha(NC_Opt);
+    
+</script>
+
+<div id="umid"></div>
+    <script type="text/javascript" charset="utf-8" src="js/um.js"></script>
+    <script type="text/javascript">
+        var cimg = new Image(1,1);
+        cimg.onload = function() {
+        cimg.onload = null;
+        };
+        cimg.src = "https://ynuf.alipay.com/service/clear.png?xt=811084fc0a17780d9e24dfe2dca8b0729140f7a9&xa=090D1F110F18383D2A";
+    </script>
+    <script type="text/javascript">
+        um.init({
+		containers:{flash: document.getElementById("umid"),dcp:document.getElementById("umid")},
+        enable: true,
+        ratio: 1,
+        timeout: 3000,
+        timestamp: '4923655055555B43574C607D',
+        token:'811084fc0a17780d9e24dfe2dca8b0729140f7a9',
+        serviceUrl:'https://ynuf.alipay.com/service/um.json',
+        proxyUrl:'https://img.alipay.com/common/um/lsa.swf',
+        appName: '090D1F110F18383D2A'
+        });
+    </script>
+    
+
+
+
+    <!--foot start-->
+<div id="footer">
+	<div class="footer-layout">
+	    <div class="copyright">
+
+		  
+									阿里巴巴版权所有 1999-2021
+			        	    </div>
+  	</div>
+</div>
+<!-- host: tbmpc033007022137.center.na620  -->
+
+</body></html>

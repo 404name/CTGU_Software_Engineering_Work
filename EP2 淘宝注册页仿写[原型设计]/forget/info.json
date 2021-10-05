@@ -1,0 +1,356 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://passport.taobao.com/ac/nick_find.htm?from_site=0&lang=zh_CN&app_name=tbTop",
+            "path": "index.html",
+            "saved": true,
+            "size": 9321,
+            "children": [
+                {
+                    "url": "https://ynuf.alipay.com/service/clear.png?xt=811084fc0a17780d9e24dfe2dca8b0729140f7a9&xa=CF_APP_GGK_HAVANAMPC",
+                    "path": "img/clear.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://a.alipayobjects.com/??seajs/seajs/2.1.1/sea.js,seajs/seajs-combo/1.0.0/seajs-combo.js,seajs/seajs-style/1.0.0/seajs-style.js",
+                    "path": "js/index.js",
+                    "saved": true,
+                    "size": 8728,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/sd/ncpc/nc.js?t=5880353256000",
+                    "path": "js/nc.js",
+                    "saved": true,
+                    "size": 220845,
+                    "children": []
+                },
+                {
+                    "url": "https://s.tbcdn.cn/g/security/umscript/2.0.0/um.js",
+                    "path": "js/um.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://g.alicdn.com/cm/account/0.4.10/css/ucenter.css",
+                    "path": "css/ucenter.css",
+                    "saved": true,
+                    "size": 44255,
+                    "children": [
+                        {
+                            "url": "https://i.alipayobjects.com/common/fonts/rei.eot?#iefix",
+                            "path": "fonts/rei.eot",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://i.alipayobjects.com/common/fonts/rei.woff",
+                            "path": "fonts/rei.woff",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://i.alipayobjects.com/common/fonts/rei.ttf",
+                            "path": "fonts/rei.ttf",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://i.alipayobjects.com/common/fonts/rei.svg#rei",
+                            "path": "img/rei.svg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alipay.com/alice/ico-loading16.gif",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://h.alipayobjects.com/static/images/uc/zh.png",
+                            "path": "img/zh.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gtms03.alicdn.com/tps/i3/TB11acLLXXXXXbrXXXXoI1ZFVXX-30-40.png",
+                            "path": "img/TB11acLLXXXXXbrXXXXoI1ZFVXX-30-40.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://h.alipayobjects.com/static/images/uc/icons.gif",
+                            "path": "img/icons.gif",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tfs/TB1QK6NFTtYBeNjy1XdXXXXyVXa-50-22.png",
+                            "path": "img/TB1QK6NFTtYBeNjy1XdXXXXyVXa-50-22.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://i.alipayobjects.com/e/201209/1COYhD8EL6.png",
+                            "path": "img/1COYhD8EL6.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://i.alipayobjects.com/e/201304/8nDD4HEZz_src.png",
+                            "path": "img/8nDD4HEZz_src.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB1C9YjLFXXXXXQXpXXXXXXXXXX-1000-923.png",
+                            "path": "img/TB1C9YjLFXXXXXQXpXXXXXXXXXX-1000-923.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB1CEpxIpXXXXcgXFXXXXXXXXXX.png",
+                            "path": "img/TB1CEpxIpXXXXcgXFXXXXXXXXXX.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB1L1tsIpXXXXcXXVXXXXXXXXXX.png",
+                            "path": "img/TB1L1tsIpXXXXcXXVXXXXXXXXXX.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB104qsLpXXXXXbapXXXXXXXXXX-228-800.png",
+                            "path": "img/TB104qsLpXXXXXbapXXXXXXXXXX-228-800.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://gw.alicdn.com/tfs/TB18ZfcpAomBKNjSZFqXXXtqVXa-332-78.png",
+                            "path": "img/TB18ZfcpAomBKNjSZFqXXXtqVXa-332-78.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB1jRyCLpXXXXbtapXXXXXXXXXX-160-39.png",
+                            "path": "img/TB1jRyCLpXXXXbtapXXXXXXXXXX-160-39.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tfs/TB12RTPRpXXXXb4aXXXXXXXXXXX-160-39.png",
+                            "path": "img/TB12RTPRpXXXXb4aXXXXXXXXXXX-160-39.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1447386693_0189764.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1447386693_0189764.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1447386693_0189764.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1447386693_0189764.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1447386693_0189764.svg#iconfont",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB1fXeWLpXXXXaQXFXXXXXXXXXX-56-90.png",
+                            "path": "img/TB1fXeWLpXXXXaQXFXXXXXXXXXX-56-90.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://img.alicdn.com/tps/TB1g.KNLpXXXXc6XVXXXXXXXXXX-479-719.png",
+                            "path": "img/TB1g.KNLpXXXXc6XVXXXXXXXXXX-479-719.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://g.alicdn.com/sd/ncpc/nc.css?t=5880353256000",
+                    "path": "css/nc.css",
+                    "saved": true,
+                    "size": 12738,
+                    "children": [
+                        {
+                            "url": "https://at.alicdn.com/t/font_1442201118_5768895.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1442201118_5768895.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1442201118_5768895.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1442201118_5768895.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://at.alicdn.com/t/font_1442201118_5768895.svg#iconfont",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://g.alicdn.com/sd/ncpc/images/checkcode.png",
+                            "path": "img/checkcode.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/sd/ncpc/images/hand.png",
+                            "path": "img/hand.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/sd/ncpc/images/no.png",
+                            "path": "img/no.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/sd/ncpc/images/close.png",
+                            "path": "img/close.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/sd/ncpc/images/rt.png",
+                            "path": "img/rt.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://g.alicdn.com/sd/ncpc/images/yes.png",
+                            "path": "img/yes.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://h.alipayobjects.com/static/images/uc/favicon.ico?v=0.4.4",
+                    "path": "favicon.ico",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "passport-taobao-com-26ifqdvn",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://g.alicdn.com/cm/account/0.4.10/css/ucenter.css",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://passport.taobao.com/ac/nick_find.htm?from_site=0&lang=zh_CN&app_name=tbTop",
+            "statusCode": 200,
+            "headers": {
+                "date": "Tue, 05 Oct 2021 10:57:40 GMT",
+                "content-type": "text/html;charset=UTF-8",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "vary": "Accept-Encoding",
+                "set-cookie": [
+                    "cookie2=1406d91b8635560ac1bbb0fb9d305f1f; Domain=.taobao.com; Path=/; HttpOnly",
+                    "t=366e9bbb2dd0d54f07d3e3f087d83f45; Domain=.taobao.com; Expires=Mon, 03-Jan-2022 10:57:40 GMT; Path=/",
+                    "_tb_token_=ee13e38951e6d; Domain=.taobao.com; Path=/"
+                ],
+                "s_v": "4.0.2.6",
+                "s_ip": "457079564a4a776b354b4946464c773d",
+                "s_tag": "285873024335988|134217728^|^^",
+                "s_ucode": "CN:CENTER",
+                "s_tid": "0b0f957f16334314601317377ed079",
+                "s_group": "tao-session",
+                "s_status": "STATUS_NOT_EXISTED",
+                "p3p": "CP='CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR'",
+                "content-language": "zh-CN",
+                "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+                "cache-control": "no-cache, no-store",
+                "pragma": "no-cache",
+                "server": "Tengine/Aserver",
+                "eagleeye-traceid": "0b0f957f16334314601317377ed079",
+                "strict-transport-security": "max-age=31536000",
+                "timing-allow-origin": "*"
+            }
+        },
+        "time": {
+            "start": "2021-10-05T10:57:39.399Z",
+            "end": "2021-10-05T10:58:46.836Z"
+        },
+        "remark": [],
+        "ip": "203.119.207.254",
+        "url": "https://passport.taobao.com/ac/nick_find.htm?from_site=0&lang=zh_CN&app_name=tbTop",
+        "main": "index.html",
+        "domain": "passport.taobao.com",
+        "origin": "https://passport.taobao.com",
+        "totalSize": "296 kB"
+    },
+    "options": {
+        "formatter": [],
+        "url": "https://passport.taobao.com/ac/nick_find.htm?from_site=0&lang=zh_CN&app_name=tbTop",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}
