@@ -9,13 +9,16 @@
 
 > 作业发布地址：【[点我](https://star.jmhui.com.cn/p1/366.html)】
 
-![效果展示](https://gitee.com/N404name/gitee-img/raw/master/myImg/dwadwadwadaadx.png)
-
 | 文件夹 | 	内容 | 	时间 | 
 |  ----  | ----  |----  |
 | EP1 编程基本练习	 | 三个基本编程实验 | 	2021/9/13 | 
-| EP1 单词统计器[小项目] | 	一个综合的单词统计小程序 | 	2021/9/13 | 
+| EP1 单词统计器[小项目] | 	[一个综合的单词统计小程序](https://github1s.com/404name/CTGU_Software_Engineering_Work) | 	2021/9/13 | 
+| EP2 淘宝仿写[小项目] | 	原型设计+[网页版](https://404name.github.io/CTGU_Software_Engineering_Work/EP2%20%E6%B7%98%E5%AE%9D%E6%B3%A8%E5%86%8C%E9%A1%B5%E4%BB%BF%E5%86%99[%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1]/index.html)+[手机版](https://404name.github.io/CTGU_Software_Engineering_Work/EP2%20%E6%B7%98%E5%AE%9D%E6%B3%A8%E5%86%8C%E9%A1%B5%E4%BB%BF%E5%86%99[%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1]/phone/index.html)<br>[github page部署,网络通畅访问] | 	2021/10/05 | 
 | 【🎈待添加】 | 	【🎈待添加】	 | 【🎈待添加】 | 
+
+![效果展示](https://gitee.com/N404name/gitee-img/raw/master/myImg/dwadwadwadaadx.png)
+
+
 
 # 使用方法
 > 在当前文件下开启cmd窗口，**输入wf查看提示**
