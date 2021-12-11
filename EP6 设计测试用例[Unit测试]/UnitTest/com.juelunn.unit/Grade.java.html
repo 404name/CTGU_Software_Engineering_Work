@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Grade.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">UnitTesting$GradeTest_fromDate.exec</a> &gt; <a href="index.source.html" class="el_package">com.juelunn.unit</a> &gt; <span class="el_source">Grade.java</span></div><h1>Grade.java</h1><pre class="source lang-java linenums">package com.juelunn.unit;
+
+/**
+ * @program: UnitTesting
+ * @description: 疫情等级枚举类
+ * @author: CTGU_LLZ(404name)
+ * @create: 2021-12-11 16:30
+ **/
+<span class="fc" id="L9">public enum Grade {</span>
+    //枚举数据段，代码风格更美观
+<span class="fc" id="L11">    LEVEL_1(2000,Integer.MAX_VALUE,1),</span>
+<span class="fc" id="L12">    LEVEL_2(1300,2000,2),</span>
+<span class="fc" id="L13">    LEVEL_3(800,1300,3),</span>
+<span class="fc" id="L14">    LEVEL_4(500,800,4),</span>
+<span class="fc" id="L15">    LEVEL_5(200,500,5),</span>
+<span class="fc" id="L16">    LEVEL_6(50,200,6),</span>
+<span class="fc" id="L17">    LEVEL_7(0,50,7);</span>
+
+    //成员变量，数据区间起点，数据终点，等级
+    private int intervalStart;
+    private int intervalEnd;
+    private int level;
+
+<span class="fc" id="L24">    Grade(int intervalStart, int lntervalEnd, int level) {</span>
+<span class="fc" id="L25">        this.intervalStart = intervalStart;</span>
+<span class="fc" id="L26">        this.intervalEnd = lntervalEnd;</span>
+<span class="fc" id="L27">        this.level = level;</span>
+<span class="fc" id="L28">    }</span>
+
+    public static Grade fromDate(int grade) {
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">        for (Grade level: Grade.values()) {</span>
+            //根据区间返回
+<span class="pc bpc" id="L33" title="1 of 4 branches missed.">            if (grade &gt;= level.getIntervalStart() &amp;&amp; grade &lt; level.getIntervalEnd()) {</span>
+<span class="fc" id="L34">                return level;</span>
+            }
+        }
+<span class="nc" id="L37">        return null;</span>
+    }
+    @Override
+    public String toString() {
+<span class="fc" id="L41">        return &quot;[&quot; + this.intervalStart+&quot;_&quot;+this.intervalEnd + &quot;] 的疫情级别是&quot;  + this.level;</span>
+    }
+    public int getIntervalStart() {
+<span class="fc" id="L44">        return intervalStart;</span>
+    }
+
+    public int getIntervalEnd() {
+<span class="fc" id="L48">        return intervalEnd;</span>
+    }
+
+    public int getLevel() {
+<span class="nc" id="L52">        return level;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
